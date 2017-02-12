@@ -35,6 +35,9 @@
             this.btnActionExtension = new System.Windows.Forms.Button();
             this.btnObservable1 = new System.Windows.Forms.Button();
             this.btnObservable2 = new System.Windows.Forms.Button();
+            this.btnAwaitable1 = new System.Windows.Forms.Button();
+            this.btnButtonAwaitable = new System.Windows.Forms.Button();
+            this.btnAwaitable2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBasicAwaitable
@@ -106,11 +109,44 @@
             this.btnObservable2.UseVisualStyleBackColor = true;
             this.btnObservable2.Click += new System.EventHandler(this.btnObservable2_Click);
             // 
+            // btnAwaitable1
+            // 
+            this.btnAwaitable1.Location = new System.Drawing.Point(163, 224);
+            this.btnAwaitable1.Name = "btnAwaitable1";
+            this.btnAwaitable1.Size = new System.Drawing.Size(75, 23);
+            this.btnAwaitable1.TabIndex = 7;
+            this.btnAwaitable1.Tag = "1";
+            this.btnAwaitable1.Text = "Awaitable 1";
+            this.btnAwaitable1.UseVisualStyleBackColor = true;
+            // 
+            // btnButtonAwaitable
+            // 
+            this.btnButtonAwaitable.Location = new System.Drawing.Point(12, 224);
+            this.btnButtonAwaitable.Name = "btnButtonAwaitable";
+            this.btnButtonAwaitable.Size = new System.Drawing.Size(129, 23);
+            this.btnButtonAwaitable.TabIndex = 8;
+            this.btnButtonAwaitable.Text = "Button Awaitable";
+            this.btnButtonAwaitable.UseVisualStyleBackColor = true;
+            this.btnButtonAwaitable.Click += new System.EventHandler(this.btnButtonAwaitable_Click);
+            // 
+            // btnAwaitable2
+            // 
+            this.btnAwaitable2.Location = new System.Drawing.Point(244, 224);
+            this.btnAwaitable2.Name = "btnAwaitable2";
+            this.btnAwaitable2.Size = new System.Drawing.Size(75, 23);
+            this.btnAwaitable2.TabIndex = 9;
+            this.btnAwaitable2.Tag = "1";
+            this.btnAwaitable2.Text = "Awaitable 2";
+            this.btnAwaitable2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 268);
+            this.ClientSize = new System.Drawing.Size(364, 291);
+            this.Controls.Add(this.btnAwaitable2);
+            this.Controls.Add(this.btnButtonAwaitable);
+            this.Controls.Add(this.btnAwaitable1);
             this.Controls.Add(this.btnObservable2);
             this.Controls.Add(this.btnObservable1);
             this.Controls.Add(this.btnActionExtension);
@@ -135,6 +171,9 @@
         private System.Windows.Forms.Button btnActionExtension;
         private System.Windows.Forms.Button btnObservable1;
         private System.Windows.Forms.Button btnObservable2;
+        private System.Windows.Forms.Button btnAwaitable1;
+        private System.Windows.Forms.Button btnButtonAwaitable;
+        private System.Windows.Forms.Button btnAwaitable2;
     }
 }
 

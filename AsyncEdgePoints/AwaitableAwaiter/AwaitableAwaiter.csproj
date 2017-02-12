@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Custom.Basic\BasicAwaitable.cs" />
     <Compile Include="Custom.Basic\BasicAwaiter.cs" />
+    <Compile Include="Custom.ButtonAw\ButtonAwaiter.cs" />
     <Compile Include="Custom.Func\FuncAwaitable.cs" />
     <Compile Include="Custom.Func\FuncAwaiter.cs" />
     <Compile Include="AwaiterExtensions.cs" />

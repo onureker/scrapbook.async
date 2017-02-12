@@ -6,6 +6,7 @@ using System.Net;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using AwaitableAwaiter.Custom.Basic;
 using AwaitableAwaiter.Custom.Func;
@@ -67,12 +68,18 @@ namespace AwaitableAwaiter
 
         public static string GetTitleFromHtml(string html)
         {
-            AsyncSubject<object> v;
-
             var regex = new Regex(@".*<head>.*<title>(.*)</title>.*</head>.*", RegexOptions.IgnoreCase | RegexOptions.Singleline);
             var match = regex.Match(html);
             var result = match.Success? match.Groups[1].Value : null;
             return result;
+        }
+
+        private async void btnButtonAwaitable_Click(object sender, EventArgs e)
+        {
+            object result1 = await btnAwaitable1;
+            object result2 = await btnAwaitable2;
+
+            MessageBox.Show($@"{result1} - {result2}");
         }
     }
 }
