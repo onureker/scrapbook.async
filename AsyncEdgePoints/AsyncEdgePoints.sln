@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogAsync", "LogAsync\LogAsy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwaitableAwaiter", "AwaitableAwaiter\AwaitableAwaiter.csproj", "{6A32C8C5-F244-4EB5-AFEB-666839BE7023}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeContext", "RuntimeContext\RuntimeContext.csproj", "{4A1F03DE-5F41-4080-8E72-4742A12A2D25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6A32C8C5-F244-4EB5-AFEB-666839BE7023}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A32C8C5-F244-4EB5-AFEB-666839BE7023}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A32C8C5-F244-4EB5-AFEB-666839BE7023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
