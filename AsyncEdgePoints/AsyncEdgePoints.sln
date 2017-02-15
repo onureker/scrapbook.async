@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwaitableAwaiter", "Awaitab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeContext", "RuntimeContext\RuntimeContext.csproj", "{4A1F03DE-5F41-4080-8E72-4742A12A2D25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronizationContextDeep", "SynchronizationContextDeep\SynchronizationContextDeep.csproj", "{495A0B39-EB4D-43AF-9954-B0D8F5E47BAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1F03DE-5F41-4080-8E72-4742A12A2D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495A0B39-EB4D-43AF-9954-B0D8F5E47BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495A0B39-EB4D-43AF-9954-B0D8F5E47BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495A0B39-EB4D-43AF-9954-B0D8F5E47BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495A0B39-EB4D-43AF-9954-B0D8F5E47BAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
