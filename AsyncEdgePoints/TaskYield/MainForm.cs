@@ -22,21 +22,19 @@ namespace TaskYield
             var random = new Random();
 
             list = new List<int>();
-            for (int i = 0; i < 100000; i++)
+            for (int i = 0; i < 1000000; i++)
             {
                 list.Add(random.Next(2, 2));
             }
         }
 
-        //Yield guarantees asynch..
+        //Yield guarntess asynch..
         private async void btnWithYield_Click(object sender, EventArgs e)
         {
             foreach (int value in list)
             {
-                //await Task.Yield();
-                var result = await FindFib(value);
                 await Task.Yield();
-                lblResult.Text = result.ToString();
+                await Process(value);
             }
 
             MessageBox.Show("Ok");
@@ -46,10 +44,15 @@ namespace TaskYield
         {
             foreach (int value in list)
             {
-                var result = await FindFib(value);
-                lblResult.Text = result.ToString();
+                await Process(value);
             }
             MessageBox.Show("Ok");
+        }
+
+        private async Task<int> Process(int value)
+        {
+            var result = await FindFib(value);
+            return result;
         }
 
         private async Task<int> FindFib(int value)
