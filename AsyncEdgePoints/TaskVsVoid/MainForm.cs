@@ -30,36 +30,35 @@ namespace TaskVsVoid
             eventArgs.SetObserved();
             eventArgs.Exception.Handle(ex =>
             {
+                MessageBox.Show(ex.Message);
                 Console.WriteLine("Exception type: {0}", ex.GetType());
                 return true;
             });
         }
 
-        private async void RunWithVoid()
-        {
-            //Bu uygulamanın crash olmasına sebep olur..
-            await ThrowException();
-        }
-
-        private async Task RunWithTask()
-        {
-            // Bu sadece unobserved exception fırlatır
-            await ThrowException();
-        }
-
-        private async Task ThrowException()
-        {
-            throw new NotImplementedException();
-        }
-
         private void btnVoid_Click(object sender, EventArgs e)
         {
-            RunWithVoid();
+            ExecuteVoidAsync();
+        }
+
+        private async void ExecuteVoidAsync()
+        {
+            await ThrowExceptionAsync();
         }
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            RunWithTask();
+            ExecuteTaskAsync();
+        }
+
+        private async Task ExecuteTaskAsync()
+        {
+            await ThrowExceptionAsync();
+        }
+
+        private async Task ThrowExceptionAsync()
+        {
+            throw new NotImplementedException();
         }
 
         private void btnGC_Click(object sender, EventArgs e)

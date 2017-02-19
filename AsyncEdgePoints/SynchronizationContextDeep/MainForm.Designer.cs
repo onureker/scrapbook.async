@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnSynchronizationContext = new System.Windows.Forms.Button();
-            this.lbSynchronizationContext = new System.Windows.Forms.ListBox();
             this.btnMyPrimitiveSynchronisationContext = new System.Windows.Forms.Button();
             this.btnStaSynchronizationContext = new System.Windows.Forms.Button();
             this.btnWCFSynchronizationContext = new System.Windows.Forms.Button();
@@ -44,14 +43,6 @@
             this.btnSynchronizationContext.Text = "Invoke By SynchronizationContext";
             this.btnSynchronizationContext.UseVisualStyleBackColor = true;
             this.btnSynchronizationContext.Click += new System.EventHandler(this.btnSynchronizationContext_Click);
-            // 
-            // lbSynchronizationContext
-            // 
-            this.lbSynchronizationContext.FormattingEnabled = true;
-            this.lbSynchronizationContext.Location = new System.Drawing.Point(210, 12);
-            this.lbSynchronizationContext.Name = "lbSynchronizationContext";
-            this.lbSynchronizationContext.Size = new System.Drawing.Size(192, 173);
-            this.lbSynchronizationContext.TabIndex = 7;
             // 
             // btnMyPrimitiveSynchronisationContext
             // 
@@ -87,11 +78,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 374);
+            this.ClientSize = new System.Drawing.Size(221, 167);
             this.Controls.Add(this.btnWCFSynchronizationContext);
             this.Controls.Add(this.btnStaSynchronizationContext);
             this.Controls.Add(this.btnMyPrimitiveSynchronisationContext);
-            this.Controls.Add(this.lbSynchronizationContext);
             this.Controls.Add(this.btnSynchronizationContext);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Name = "MainForm";
@@ -103,7 +93,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnSynchronizationContext;
-        private System.Windows.Forms.ListBox lbSynchronizationContext;
         private System.Windows.Forms.Button btnMyPrimitiveSynchronisationContext;
         private System.Windows.Forms.Button btnStaSynchronizationContext;
         private System.Windows.Forms.Button btnWCFSynchronizationContext;
