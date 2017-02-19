@@ -52,7 +52,7 @@
             // 
             // btnFuncAwaitable
             // 
-            this.btnFuncAwaitable.Location = new System.Drawing.Point(12, 41);
+            this.btnFuncAwaitable.Location = new System.Drawing.Point(183, 12);
             this.btnFuncAwaitable.Name = "btnFuncAwaitable";
             this.btnFuncAwaitable.Size = new System.Drawing.Size(129, 23);
             this.btnFuncAwaitable.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lblFuncResult
             // 
             this.lblFuncResult.AutoSize = true;
-            this.lblFuncResult.Location = new System.Drawing.Point(160, 46);
+            this.lblFuncResult.Location = new System.Drawing.Point(180, 109);
             this.lblFuncResult.Name = "lblFuncResult";
             this.lblFuncResult.Size = new System.Drawing.Size(37, 13);
             this.lblFuncResult.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // btnFuncExtension
             // 
-            this.btnFuncExtension.Location = new System.Drawing.Point(12, 70);
+            this.btnFuncExtension.Location = new System.Drawing.Point(183, 41);
             this.btnFuncExtension.Name = "btnFuncExtension";
             this.btnFuncExtension.Size = new System.Drawing.Size(129, 23);
             this.btnFuncExtension.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // btnActionExtension
             // 
-            this.btnActionExtension.Location = new System.Drawing.Point(12, 99);
+            this.btnActionExtension.Location = new System.Drawing.Point(183, 70);
             this.btnActionExtension.Name = "btnActionExtension";
             this.btnActionExtension.Size = new System.Drawing.Size(129, 23);
             this.btnActionExtension.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             // btnObservable1
             // 
-            this.btnObservable1.Location = new System.Drawing.Point(12, 142);
+            this.btnObservable1.Location = new System.Drawing.Point(551, 12);
             this.btnObservable1.Name = "btnObservable1";
             this.btnObservable1.Size = new System.Drawing.Size(129, 23);
             this.btnObservable1.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // btnObservable2
             // 
-            this.btnObservable2.Location = new System.Drawing.Point(12, 171);
+            this.btnObservable2.Location = new System.Drawing.Point(551, 41);
             this.btnObservable2.Name = "btnObservable2";
             this.btnObservable2.Size = new System.Drawing.Size(129, 23);
             this.btnObservable2.TabIndex = 6;
@@ -111,7 +111,8 @@
             // 
             // btnAwaitable1
             // 
-            this.btnAwaitable1.Location = new System.Drawing.Point(163, 224);
+            this.btnAwaitable1.Enabled = false;
+            this.btnAwaitable1.Location = new System.Drawing.Point(368, 41);
             this.btnAwaitable1.Name = "btnAwaitable1";
             this.btnAwaitable1.Size = new System.Drawing.Size(75, 23);
             this.btnAwaitable1.TabIndex = 7;
@@ -121,7 +122,7 @@
             // 
             // btnButtonAwaitable
             // 
-            this.btnButtonAwaitable.Location = new System.Drawing.Point(12, 224);
+            this.btnButtonAwaitable.Location = new System.Drawing.Point(368, 12);
             this.btnButtonAwaitable.Name = "btnButtonAwaitable";
             this.btnButtonAwaitable.Size = new System.Drawing.Size(129, 23);
             this.btnButtonAwaitable.TabIndex = 8;
@@ -131,7 +132,8 @@
             // 
             // btnAwaitable2
             // 
-            this.btnAwaitable2.Location = new System.Drawing.Point(244, 224);
+            this.btnAwaitable2.Enabled = false;
+            this.btnAwaitable2.Location = new System.Drawing.Point(368, 70);
             this.btnAwaitable2.Name = "btnAwaitable2";
             this.btnAwaitable2.Size = new System.Drawing.Size(75, 23);
             this.btnAwaitable2.TabIndex = 9;
@@ -143,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 291);
+            this.ClientSize = new System.Drawing.Size(760, 168);
             this.Controls.Add(this.btnAwaitable2);
             this.Controls.Add(this.btnButtonAwaitable);
             this.Controls.Add(this.btnAwaitable1);

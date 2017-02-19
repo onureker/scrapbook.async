@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AwaitableAwaiter.Fake;
@@ -7,12 +8,14 @@ namespace AwaitableAwaiter.Custom.ButtonAw
 {
     public class ButtonAwaiter : IAwaiter<object>
     {
+        private readonly SynchronizationContext uiSynchronizationContext;
         private readonly TaskCompletionSource<object> tcs;
 
-        public ButtonAwaiter(Button button)
+        public ButtonAwaiter(Button button, SynchronizationContext uiSynchronizationContext)
         {
+            this.uiSynchronizationContext = uiSynchronizationContext;
             tcs = new TaskCompletionSource<object>();
-            //button.Enabled = true;
+            uiSynchronizationContext.Send(() => button.Enabled = true);
             button.Click += ButtonOnClick;
         }
 
@@ -20,7 +23,7 @@ namespace AwaitableAwaiter.Custom.ButtonAw
         {
             Button button = (Button) sender;
             tcs.SetResult(button.Tag);
-            //button.Enabled = false;
+            uiSynchronizationContext.Send(() => button.Enabled = false);
             button.Click -= ButtonOnClick;
         }
 

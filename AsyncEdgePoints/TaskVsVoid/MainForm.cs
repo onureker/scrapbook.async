@@ -35,29 +35,31 @@ namespace TaskVsVoid
             });
         }
 
-        static async void f()
+        private async void RunWithVoid()
         {
-            await h();
+            //Bu uygulamanın crash olmasına sebep olur..
+            await ThrowException();
         }
 
-        static async Task g()
+        private async Task RunWithTask()
         {
-            await h();
+            // Bu sadece unobserved exception fırlatır
+            await ThrowException();
         }
 
-        static async Task h()
+        private async Task ThrowException()
         {
             throw new NotImplementedException();
         }
 
         private void btnVoid_Click(object sender, EventArgs e)
         {
-            f();
+            RunWithVoid();
         }
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            g();
+            RunWithTask();
         }
 
         private void btnGC_Click(object sender, EventArgs e)
