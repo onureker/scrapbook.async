@@ -30,6 +30,7 @@
         {
             this.btnWithYield = new System.Windows.Forms.Button();
             this.btnWithoutYield = new System.Windows.Forms.Button();
+            this.lblCounter = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -53,21 +54,31 @@
             this.btnWithoutYield.UseVisualStyleBackColor = true;
             this.btnWithoutYield.Click += new System.EventHandler(this.btnWithoutYield_Click);
             // 
+            // lblCounter
+            // 
+            this.lblCounter.AutoSize = true;
+            this.lblCounter.Location = new System.Drawing.Point(182, 17);
+            this.lblCounter.Name = "lblCounter";
+            this.lblCounter.Size = new System.Drawing.Size(46, 13);
+            this.lblCounter.TabIndex = 2;
+            this.lblCounter.Text = "Counter";
+            // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(182, 17);
+            this.lblResult.Location = new System.Drawing.Point(248, 17);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(37, 13);
-            this.lblResult.TabIndex = 2;
+            this.lblResult.TabIndex = 3;
             this.lblResult.Text = "Result";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 82);
+            this.ClientSize = new System.Drawing.Size(338, 82);
             this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.lblCounter);
             this.Controls.Add(this.btnWithoutYield);
             this.Controls.Add(this.btnWithYield);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -82,6 +93,7 @@
 
         private System.Windows.Forms.Button btnWithYield;
         private System.Windows.Forms.Button btnWithoutYield;
+        private System.Windows.Forms.Label lblCounter;
         private System.Windows.Forms.Label lblResult;
     }
 }
