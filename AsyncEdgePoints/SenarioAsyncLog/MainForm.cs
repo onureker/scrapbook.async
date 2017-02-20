@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web.Hosting;
 using System.Windows.Forms;
 
 namespace SenarioAsyncLog
@@ -20,13 +15,22 @@ namespace SenarioAsyncLog
             logger = new Logger();
         }
 
-        private void btnInsertLogs_Click(object sender, EventArgs e)
+        private void btnConsoleLog_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 100; i++)
-            {
-                LogModel logModel = ToLogModel(i);
-                logger.Log(logModel);
-            }
+            Enumerable.Range(0, 1000).Select(ToLogModel).ToList().ForEach(model => logger.LogConsole(model));
+            MessageBox.Show("OK");
+        }
+
+        private void btnTraceLog_Click(object sender, EventArgs e)
+        {
+            Enumerable.Range(0, 1000).Select(ToLogModel).ToList().ForEach(model => logger.LogTrace1(model));
+            MessageBox.Show("OK");
+        }
+
+        private void btnDBLog_Click(object sender, EventArgs e)
+        {
+            Enumerable.Range(0, 10).Select(ToLogModel).ToList().ForEach(model => logger.LogDb(model));
+            MessageBox.Show("OK");
         }
 
         private LogModel ToLogModel(int index)
@@ -34,6 +38,18 @@ namespace SenarioAsyncLog
             var logModel = new LogModel();
             logModel.Message = $@"Message - {index}";
             return logModel;
+        }
+
+        private void btnHostingEnviornment_Click(object sender, EventArgs e)
+        {
+            Enumerable.Range(0, 10).Select(ToLogModel).ToList().ForEach(model => HostingEnvironment.QueueBackgroundWorkItem(token => logger.LogTrace1(model)));
+            MessageBox.Show("OK");
+        }
+
+        private void btnTraceLog2_Click(object sender, EventArgs e)
+        {
+            Enumerable.Range(0, 1000).Select(ToLogModel).ToList().ForEach(model => { logger.LogTrace2(model); });
+            MessageBox.Show("OK");
         }
     }
 }

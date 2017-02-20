@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(221, 167);
+            this.ClientSize = new System.Drawing.Size(359, 310);
             this.Controls.Add(this.btnWCFSynchronizationContext);
             this.Controls.Add(this.btnStaSynchronizationContext);
             this.Controls.Add(this.btnMyPrimitiveSynchronisationContext);

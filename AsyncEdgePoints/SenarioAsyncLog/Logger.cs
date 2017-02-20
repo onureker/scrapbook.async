@@ -1,4 +1,7 @@
-﻿using System.Data.SQLite;
+﻿using System;
+using System.Data.SQLite;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Dapper;
 using Dapper.Contrib.Extensions;
 
@@ -22,14 +25,44 @@ namespace SenarioAsyncLog
             }
         }
 
-        public void Log(LogModel log)
+        //LogDb methodu Task dönmeli çünkü void olursa ve hata alırsa application crash olur.
+        //Ama eğer async olsun istiyorsa, çağıran await etmesine gerek yoktur
+        public async Task LogDb(LogModel log)
         {
-            // Bu şekilde patlar aslında çünkü asyn olan iş bitine kadar connection uçuyor bile (en azından sql server da öyle..)
             string connectionString = @"data source=Demo.db3; Version=3;";
             using (var dbConnection = new SQLiteConnection(connectionString))
             {
-                dbConnection.InsertAsync(log);
+                // Await edilmezse patlar aslında çünkü, async olan iş bitine kadar connection uçuyor olabilir.
+                await dbConnection.InsertAsync(log);
             }
+        }
+
+        public async Task LogConsole(LogModel log)
+        {
+            await Task.Run(() =>
+            {
+                Console.WriteLine(log.Message);
+            });
+        }
+
+        //TODO: Bunu araştır
+        //Await etmeyince hemen bitiyor ama neden await edince kalıyor
+        public Task LogTrace1(LogModel log)
+        {
+            return Task.Run(() =>
+            {
+                Trace.WriteLine(log.Message);
+            });
+        }
+
+        //TODO: Bunu araştır
+        //Await etmeyince hemen bitiyor ama neden await edince kalıyor
+        public async Task LogTrace2(LogModel log)
+        {
+            await Task.Run(() =>
+            {
+                Trace.WriteLine(log.Message);
+            });
         }
     }
 }

@@ -27,7 +27,7 @@ namespace AwaitVsContinueWith
         private async void btnAwaited_Click(object sender, EventArgs e)
         {
             tbResult.Text = @"Waiting...";
-            string html = await webClient.DownloadStringTaskAsync("https://weblogs.asp.net/dixin");
+            string html = await webClient.DownloadStringTaskAsync("http://www.google.com");
             tbResult.Text = html.Substring(1, 5);
             GC.Collect();
         }
@@ -39,12 +39,12 @@ namespace AwaitVsContinueWith
             try
             {
                 tbResult.Text = @"Waiting...";
-                Task<string> task = webClient.DownloadStringTaskAsync("https://weblogs.asp.net/dixin");
+                Task<string> task = webClient.DownloadStringTaskAsync("http://www.google.com");
                 Task otherTask = task.ContinueWith(prev =>
                 {
                     string html = prev.Result;
-                    tbResult.Text = html;
-                });
+                    tbResult.Text = html.Substring(1, 5);
+                }); // Eğer TaskScheduler.FromCurrentSynchronizationContext() verilirse o zaman şaunki sync contextte çalıştığı için patlamaz
                 await otherTask;
             }
             catch (Exception exception)
