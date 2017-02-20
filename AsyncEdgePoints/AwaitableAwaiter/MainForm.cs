@@ -24,6 +24,7 @@ namespace AwaitableAwaiter
         {
             InitializeComponent();
             this.uiSynchronizationContext = SynchronizationContext.Current;
+            ButtonExtensions.UiSynchronizationContext = SynchronizationContext.Current;
         }
 
         private async void btnCustomAwaitable_Click(object sender, EventArgs e)
@@ -52,8 +53,8 @@ namespace AwaitableAwaiter
 
         private async void btnButtonAwaitable_Click(object sender, EventArgs e)
         {
-            object result1 = await btnAwaitable1.AsAwaitable(uiSynchronizationContext);
-            object result2 = await btnAwaitable2.AsAwaitable(uiSynchronizationContext);
+            object result1 = await btnAwaitable1;
+            object result2 = await btnAwaitable2;
 
             MessageBox.Show($@"{result1} - {result2}");
         }

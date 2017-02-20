@@ -60,12 +60,11 @@
   <ItemGroup>
     <Compile Include="Custom.Basic\BasicAwaitable.cs" />
     <Compile Include="Custom.Basic\BasicAwaiter.cs" />
-    <Compile Include="Custom.ButtonAw\ButtonAwaitable.cs" />
     <Compile Include="Custom.ButtonAw\ButtonAwaiter.cs" />
     <Compile Include="Custom.Func\Extensions.cs" />
     <Compile Include="Custom.Func\FuncAwaitable.cs" />
     <Compile Include="Custom.Func\FuncAwaiter.cs" />
-    <Compile Include="Custom.ButtonAw\Extensions.cs" />
+    <Compile Include="Custom.ButtonAw\ButtonExtensions.cs" />
     <Compile Include="Fake\IAwaitable.cs" />
     <Compile Include="Fake\IAwaiter.cs" />
     <Compile Include="MainForm.cs">

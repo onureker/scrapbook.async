@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenarioAsyncLog", "SenarioA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "+", "+", "{ADD66D39-3C21-4DE5-9F35-6D8683B36383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwaitVsContinueWith", "AwaitVsContinueWith\AwaitVsContinueWith.csproj", "{EA7E69E7-921D-4287-ACE2-B5BCB1ECE46A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{969B3F63-8569-4D8F-9E30-D8F4A42FD349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969B3F63-8569-4D8F-9E30-D8F4A42FD349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969B3F63-8569-4D8F-9E30-D8F4A42FD349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7E69E7-921D-4287-ACE2-B5BCB1ECE46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7E69E7-921D-4287-ACE2-B5BCB1ECE46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7E69E7-921D-4287-ACE2-B5BCB1ECE46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7E69E7-921D-4287-ACE2-B5BCB1ECE46A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{60765BC8-FB2D-4043-ABA7-E01F2DB6674D} = {ADD66D39-3C21-4DE5-9F35-6D8683B36383}
 		{6A32C8C5-F244-4EB5-AFEB-666839BE7023} = {ADD66D39-3C21-4DE5-9F35-6D8683B36383}
+		{EA7E69E7-921D-4287-ACE2-B5BCB1ECE46A} = {ADD66D39-3C21-4DE5-9F35-6D8683B36383}
 	EndGlobalSection
 EndGlobal

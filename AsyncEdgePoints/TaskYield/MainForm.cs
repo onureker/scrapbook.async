@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace TaskYield
 {
+    //http://stackoverflow.com/questions/23431595/task-yield-real-usages
     //http://blog.stephencleary.com/2015/04/a-tour-of-task-part-10-promise-tasks.html
     //http://vunvulearadu.blogspot.com.tr/2012/07/taskyield-taskdelay.html
     public partial class MainForm : Form
@@ -34,7 +35,7 @@ namespace TaskYield
             foreach (int value in list)
             {
                 await Task.Yield();
-                await Process(value);
+                await FindFib(value);
             }
 
             MessageBox.Show("Ok");
@@ -44,15 +45,9 @@ namespace TaskYield
         {
             foreach (int value in list)
             {
-                await Process(value);
+                await FindFib(value);
             }
             MessageBox.Show("Ok");
-        }
-
-        private async Task<int> Process(int value)
-        {
-            var result = await FindFib(value);
-            return result;
         }
 
         private async Task<int> FindFib(int value)
@@ -62,7 +57,11 @@ namespace TaskYield
                 return value;
             }
 
-            var result = await FindFib(value - 2) + await FindFib(value - 1);
+            await Task.Yield();
+            var value1 = await FindFib(value - 2);
+            await Task.Yield();
+            var value2 = await FindFib(value - 1);
+            var result = value1 + value2;
             return result;
         }
 
