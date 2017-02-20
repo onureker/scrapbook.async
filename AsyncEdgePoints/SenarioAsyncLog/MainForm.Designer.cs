@@ -32,7 +32,6 @@
             this.btnTraceLog1 = new System.Windows.Forms.Button();
             this.btnDBLog = new System.Windows.Forms.Button();
             this.btnHostingEnviornment = new System.Windows.Forms.Button();
-            this.btnTraceLog2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConsoleLog
@@ -75,22 +74,11 @@
             this.btnHostingEnviornment.UseVisualStyleBackColor = true;
             this.btnHostingEnviornment.Click += new System.EventHandler(this.btnHostingEnviornment_Click);
             // 
-            // btnTraceLog2
-            // 
-            this.btnTraceLog2.Location = new System.Drawing.Point(168, 41);
-            this.btnTraceLog2.Name = "btnTraceLog2";
-            this.btnTraceLog2.Size = new System.Drawing.Size(150, 23);
-            this.btnTraceLog2.TabIndex = 4;
-            this.btnTraceLog2.Text = "Log To Trace (1000)";
-            this.btnTraceLog2.UseVisualStyleBackColor = true;
-            this.btnTraceLog2.Click += new System.EventHandler(this.btnTraceLog2_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 217);
-            this.Controls.Add(this.btnTraceLog2);
             this.Controls.Add(this.btnHostingEnviornment);
             this.Controls.Add(this.btnDBLog);
             this.Controls.Add(this.btnTraceLog1);
@@ -108,7 +96,6 @@
         private System.Windows.Forms.Button btnTraceLog1;
         private System.Windows.Forms.Button btnDBLog;
         private System.Windows.Forms.Button btnHostingEnviornment;
-        private System.Windows.Forms.Button btnTraceLog2;
     }
 }
 

@@ -23,7 +23,7 @@ namespace SenarioAsyncLog
 
         private void btnTraceLog_Click(object sender, EventArgs e)
         {
-            Enumerable.Range(0, 1000).Select(ToLogModel).ToList().ForEach(model => logger.LogTrace1(model));
+            Enumerable.Range(0, 1000).Select(ToLogModel).ToList().ForEach(model => logger.LogTrace(model));
             MessageBox.Show("OK");
         }
 
@@ -42,13 +42,7 @@ namespace SenarioAsyncLog
 
         private void btnHostingEnviornment_Click(object sender, EventArgs e)
         {
-            Enumerable.Range(0, 10).Select(ToLogModel).ToList().ForEach(model => HostingEnvironment.QueueBackgroundWorkItem(token => logger.LogTrace1(model)));
-            MessageBox.Show("OK");
-        }
-
-        private void btnTraceLog2_Click(object sender, EventArgs e)
-        {
-            Enumerable.Range(0, 1000).Select(ToLogModel).ToList().ForEach(model => { logger.LogTrace2(model); });
+            Enumerable.Range(0, 10).Select(ToLogModel).ToList().ForEach(model => HostingEnvironment.QueueBackgroundWorkItem(token => logger.LogTrace(model)));
             MessageBox.Show("OK");
         }
     }

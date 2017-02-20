@@ -45,21 +45,9 @@ namespace SenarioAsyncLog
             });
         }
 
-        //TODO: Bunu araştır
-        //Await etmeyince hemen bitiyor ama neden await edince kalıyor
-        public Task LogTrace1(LogModel log)
+        public Task LogTrace(LogModel log)
         {
             return Task.Run(() =>
-            {
-                Trace.WriteLine(log.Message);
-            });
-        }
-
-        //TODO: Bunu araştır
-        //Await etmeyince hemen bitiyor ama neden await edince kalıyor
-        public async Task LogTrace2(LogModel log)
-        {
-            await Task.Run(() =>
             {
                 Trace.WriteLine(log.Message);
             });
